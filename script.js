@@ -12,6 +12,9 @@ function passAccept() {
    var special = confirm("Would you like your password to contain special characters?");
 }
 
+function passChar() {
+    alert("Please choose at least one character type."); 
+}
 
 //This will alert the user if password length is unacceptable
 if (passLength > 128 || passLength < 8) {
@@ -22,13 +25,8 @@ else {
     passAccept();
 }
 
-
-
-
-
-// This will alert the user to select at least one character type
-if (lowerCase !== true && upperCase !== true && wholeNumber !== true && special !== true) {
-    alert("Please choose at least one character type.")
+ if (lowerCase !== true && upperCase !== true && wholeNumber !== true && special !== true) {
+    passChar();
 }
 
 
