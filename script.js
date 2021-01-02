@@ -6,10 +6,12 @@ if (passLength > 128 || passLength < 8) {
 }
 
 if (passLength <= 128 && passLength >= 8) {
-    var lowerCase = prompt("Would you like your password to contain lowercase letters?")
-    var upperCase = prompt("Would you like your password to contain uppercase letters?")
-    var wholeNumber = prompt("Would you like your password to contain numeric characters?")
-    var special = prompt("Would you like your password to contain special characters?")
+    var lowerCase = confirm("Would you like your password to contain lowercase letters?")
+    var upperCase = confirm("Would you like your password to contain uppercase letters?")
+    var wholeNumber = confirm("Would you like your password to contain numeric characters?")
+    var special = confirm("Would you like your password to contain special characters?")
+
+}
 
 
 
