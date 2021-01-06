@@ -2,17 +2,7 @@
 var passLength = prompt("Please choose the number of characters you'd like your password to contain.") 
 var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*"; 
 
-function generatePassword (length) {
-    var result = "";
-    var charactersLength = characters.length;
-    for (let j = 0; j < length; j++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
 
-    return result;
-}
-
-console.log(generatePassword(passLength))
 
 
 
@@ -42,11 +32,21 @@ else {
     passAccept();
 }
 
-if (lowerCase != true && upperCase != true && wholeNumber != true && special != true) {
+if (loweCase!== true && upperCase !== true && wholeNumber !== true && special !== true) {
     passChar();
 }
 
+function generatePassword (length) {
+    var result = "";
+    var charactersLength = characters.length;
+    for (let j = 0; j < length; j++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
 
+    return result;
+}
+
+console.log(generatePassword(passLength)) 
 
 
 
