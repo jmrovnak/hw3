@@ -11,7 +11,7 @@ function generatePassword (length) {
     return result;
 }
 
-console.log(generatePassword(12))
+console.log(generatePassword(66))
 
 
 
