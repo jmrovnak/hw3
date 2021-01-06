@@ -1,5 +1,6 @@
 // Assignment Code
-var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";
+var passLength = prompt("Please choose the number of characters you'd like your password to contain.") 
+var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*"; 
 
 function generatePassword (length) {
     var result = "";
@@ -11,11 +12,9 @@ function generatePassword (length) {
     return result;
 }
 
-console.log(generatePassword(66))
+console.log(generatePassword(passLength))
 
 
-
-var passLength = prompt("Please choose the number of characters you'd like your password to contain.") 
 
 
 
