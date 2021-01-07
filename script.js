@@ -24,11 +24,11 @@ function passChar() {
 }
 
 //This will alert the user if password length is unacceptable
-if (passLength > 128 || passLength < 8) {
+if (passLength < 8|| passLength >128) {
     passChastise();
 }
 
-else {
+if (passLength >= 8 && passLength <= 128) {
     passAccept();
 }
 
