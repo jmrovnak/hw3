@@ -40,12 +40,12 @@ if (lowerCase !== true && upperCase !== true && wholeNumber !== true && special 
    passChar();
 
 
-var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*"; 
+var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*"; //
 
 function generatePassword (length) {
-    var result = "";
+    var result = ""; //define var as empty string
     var charactersLength = characters.length;
-    for (var j = 0; j < length; j++ ) {
+    for (var j = 0; j < length; j++ ) { //write a random password using all possible character types
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
 
@@ -55,18 +55,21 @@ function generatePassword (length) {
 console.log(generatePassword(passLength)) //console test broad password writing loop
 
 function generateFullPassword() {
-    var fullPassword = ""
-    var allowed = {};
-    if (lowerCase) fullPassword += Math.random(allowed.lowerCase = "abcdefghijklmnopqrstuvwxyz");
-    if (upperCase) fullPassword += Math.random(allowed.upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    if (wholeNumber) fullPassword += Math.random(allowed.wholeNumber = "0123456789");
-    if (special) fullPassword += Math.random(allowed.special = "!@#$%^&*()");
+    var fullPassword = "" //define var as empty string
+    var allowed = {}; //define var as empty object
+    if (lowerCase) fullPassword += Math.random(allowed.lowerCase = "abcdefghijklmnopqrstuvwxyz"); //trying to add a random value to fullPassword var
+    if (upperCase) fullPassword += Math.random(allowed.upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"); //trying to add a random value to fullPassword var
+    if (wholeNumber) fullPassword += Math.random(allowed.wholeNumber = "0123456789"); //trying to add a random value to fullPassword var
+    if (special) fullPassword += Math.random(allowed.special = "!@#$%^&*()"); //trying to add a random value to fullPassword var
 
-    for (var k = fullPassword.length; k < length; k++) fullPassword += Math.floor(math.random(allowed).value);
+    for (var k = fullPassword.length; k < length; k++) {fullPassword += Math.floor(math.random(allowed).value);
+
+    }
+
+return fullPassword;
 
 }
-
-console.log(generateFullPassword(passLength))
+console.log(generateFullPassword(passLength)) // 
 
 
 
