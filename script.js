@@ -32,7 +32,7 @@ else {
     passAccept();
 }
 
-if (loweCase!== true && upperCase !== true && wholeNumber !== true && special !== true) {
+if (lowerCase !== true && upperCase !== true && wholeNumber !== true && special !== true) {
     passChar();
 }
 
@@ -46,7 +46,7 @@ function generatePassword (length) {
     return result;
 }
 
-console.log(generatePassword(passLength)) 
+console.log(generatePassword(passLength)) //test simple password writing function
 
 
 
