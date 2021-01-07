@@ -12,11 +12,11 @@ function passChastise() {
     alert("Your password must contain between 8 and 128 characters.");
 }
 
-function passAccept() {
-   var lowerCase = confirm("Would you like your password to contain lowercase letters?");
-   var upperCase = confirm("Would you like your password to contain uppercase letters?");
-   var wholeNumber = confirm("Would you like your password to contain numeric characters?");
-   var special = confirm("Would you like your password to contain special characters?");
+function passAccept() { //remove
+   var lowerCase = confirm("Would you like your password to contain lowercase letters?"); //remove
+   var upperCase = confirm("Would you like your password to contain uppercase letters?"); //remove
+   var wholeNumber = confirm("Would you like your password to contain numeric characters?"); //remove
+   var special = confirm("Would you like your password to contain special characters?"); //remove
 }
 
 function passChar() {
@@ -52,7 +52,7 @@ function generatePassword (length) {
     return result;
 }
 
-console.log(generatePassword(passLength)) //test simple password writing function
+console.log(generatePassword(passLength)) //console test broad password writing loop
 
 
 
