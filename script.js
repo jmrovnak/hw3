@@ -45,7 +45,7 @@ var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
 function generatePassword (length) {
     var result = "";
     var charactersLength = characters.length;
-    for (let j = 0; j < length; j++ ) {
+    for (var j = 0; j < length; j++ ) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
 
@@ -53,6 +53,22 @@ function generatePassword (length) {
 }
 
 console.log(generatePassword(passLength)) //console test broad password writing loop
+
+function generateFullPassword() {
+    var fullPassword = ""
+    var allowed = {};
+    if (lowerCase) fullPassword += Math.random(allowed.lowerCase = "abcdefghijklmnopqrstuvwxyz");
+    if (upperCase) fullPassword += Math.random(allowed.upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    if (wholeNumber) fullPassword += Math.random(allowed.wholeNumber = "0123456789");
+    if (special) fullPassword += Math.random(allowed.special = "!@#$%^&*()");
+
+    for (var k = fullPassword.length; k < length; k++) fullPassword += Math.floor(math.random(allowed).value);
+
+}
+
+console.log(generateFullPassword(passLength))
+
+
 
 
 
@@ -70,4 +86,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
