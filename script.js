@@ -69,7 +69,7 @@ function generateFullPassword() {
 return fullPassword;
 
 }
-console.log(generateFullPassword(passLength)) // 
+console.log(generateFullPassword(passLength)) // console test full password
 
 
 
