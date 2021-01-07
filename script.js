@@ -54,7 +54,7 @@ function generatePassword (length) {
 
 console.log(generatePassword(passLength)) //console test broad password writing loop
 
-function generateFullPassword() {
+function generateFullPassword(length) {
     var fullPassword = "" //define var as empty string
     var allowed = {}; //define var as empty object
     if (lowerCase) fullPassword += Math.random(allowed.lowerCase = "abcdefghijklmnopqrstuvwxyz"); //trying to add a random value to fullPassword var
