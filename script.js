@@ -1,6 +1,6 @@
 // Assignment Code
 var passLength = prompt("Please choose the number of characters you'd like your password to contain.") 
-var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*"; 
+
 
 
 
@@ -23,18 +23,24 @@ function passChar() {
     alert("Please choose at least one character type."); 
 }
 
-//This will alert the user if password length is unacceptable
-if (passLength < 8|| passLength >128) {
+
+if (passLength < 8 || passLength >128) {
     passChastise();
 }
 
 if (passLength >= 8 && passLength <= 128) {
-    passAccept();
+    var lowerCase = confirm("Would you like your password to contain lowercase letters?");
+    var upperCase = confirm("Would you like your password to contain uppercase letters?");
+    var wholeNumber = confirm("Would you like your password to contain numeric characters?");
+    var special = confirm("Would you like your password to contain special characters?");
+
 }
 
-if (lowerCase !== true && upperCase !== true && wholeNumber !== true && special !== true) {
-    passChar();
-}
+if (lowerCase !== true && upperCase !== true && wholeNumber !== true && special !== true)
+   passChar();
+
+
+var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*"; 
 
 function generatePassword (length) {
     var result = "";
